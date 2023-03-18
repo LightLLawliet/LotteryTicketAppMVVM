@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LotteryTDD</string>
+    <string name="put_a_number_here">Put a number here</string>
+    <string name="attempt">try</string>
+    <string name="incorrect_number">Incorrect number!</string>
+    <string name="loss">You lost! Better luck next time</string>
+    <string name="win">Congratulations! You won!</string>
+</resources>
