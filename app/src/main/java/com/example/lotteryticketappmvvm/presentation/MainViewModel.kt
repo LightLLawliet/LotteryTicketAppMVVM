@@ -3,8 +3,10 @@ package com.example.lotteryticketappmvvm.presentation
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
+import com.example.lotteryticketappmvvm.data.LotteryTicket
 import com.example.lotteryticketappmvvm.data.MainInteractor
 import com.example.lotteryticketappmvvm.data.ResultCommunication
+import com.example.lotteryticketappmvvm.data.TicketFactory
 
 class MainViewModel(
     private val communicationResult: ResultCommunication,
@@ -16,5 +18,7 @@ class MainViewModel(
 
     fun init() =
         interactor.init().map()
+
+    fun update(result: Int): LotteryTicket = TicketFactory.Base().ticket(result)
 }
 

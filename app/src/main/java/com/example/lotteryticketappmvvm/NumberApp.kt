@@ -15,7 +15,8 @@ class NumberApp : Application() {
         super.onCreate()
         viewModel = MainViewModel(
             ResultCommunication.Base(),
-            MainInteractor()
+            MainInteractor.Base(
+                Repository.Base(ManageResources.Base(this), LotteryTicket.Base(viewModel.update())))
         )
     }
 }

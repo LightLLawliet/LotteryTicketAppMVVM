@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             editText.setText("")
+            viewModel.update(editText.toString().toInt())
         }
         viewModel.init()
     }
